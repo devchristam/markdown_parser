@@ -17,7 +17,9 @@ const Markdown: React.FC<Props> = props => {
         h6: ({node, ...props}) => {return <div className="text-xl my-4" {...props}></div>},
         strong: ({node, ...props}) => {return <span className="font-bold" {...props}></span>},
         em: ({node, ...props}) => {return <span className="italic" {...props}></span>},
-        blockquote: ({node, ...props}) => {return <blockquote className="bg-white border-l-8 border-green-600 px-4 py-3 my-4 mx-1" {...props}></blockquote>}
+        blockquote: ({node, ...props}) => {return <blockquote className="bg-white border-l-8 border-green-600 px-4 py-3 my-4 mx-1" {...props}></blockquote>},
+        ul: ({node, ...props}) => {return <ul className="list-inside list-disc my-4 mx-4" {...props}></ul>},
+        ol: ({node, ...props}) => {return <ol className="list-inside list-decimal my-4 mx-4" {...props}></ol>},
       }}>
         {props.children}
       </ReactMarkdown>
