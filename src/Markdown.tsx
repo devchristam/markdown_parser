@@ -19,6 +19,7 @@ export const Markdown: React.FC<MarkdownProps> = props => {
       blockquote: ({node, ...props}) => {return <blockquote className="bg-white border-l-8 border-green-600 px-4 py-3 my-4 mx-1" {...props}></blockquote>},
       ul: ({node, ...props}) => {return <ul className="list-inside list-disc my-4 mx-4" {...props}></ul>},
       ol: ({node, ...props}) => {return <ol className="list-inside list-decimal my-4 mx-4" {...props}></ol>},
+      a: ({node, ...props}) => {return <a className="text-blue-400" {...props}>{props.children}</a>},
     }} />
   );
 }
