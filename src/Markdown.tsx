@@ -20,7 +20,7 @@ export const Markdown: React.FC<MarkdownProps> = props => {
       ul: ({node, ...props}) => {return <ul className="list-inside list-disc my-4 mx-4" {...props}></ul>},
       ol: ({node, ...props}) => {return <ol className="list-inside list-decimal my-4 mx-4" {...props}></ol>},
       a: ({node, ...props}) => {return <a className="text-blue-400" {...props}>{props.children}</a>},
-      img: ({node, ...props}) => {return <div className="w-1/4"><img className="object-fill" alt={props.key} {...props}/></div>},
+      img: ({node, ...props}) => {return <div className="w-full flex justify-center"><img className="object-fill" alt={props.key} {...props}/></div>},
     }} />
   );
 }
