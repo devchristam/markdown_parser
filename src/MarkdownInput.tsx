@@ -7,13 +7,13 @@ export interface markdownInputProps {
 
 export const MarkdownInput: React.FC<markdownInputProps> = ({markdownText, setMarkdownText}) => {
 
-	const updateMarkdown = (event: React.ChangeEvent<HTMLInputElement>): void => {
+	const updateMarkdown = (event: React.ChangeEvent<HTMLTextAreaElement>): void => {
 		setMarkdownText(event.target.value)
 	}
 
 	return (
 		<div>
-			<input type="text" value={ markdownText } onChange={ updateMarkdown }/>
+			<textarea className="resize-none" value={ markdownText } onChange={ updateMarkdown } ></textarea>
 			{markdownText}
 		</div>
 	)
