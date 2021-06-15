@@ -3,6 +3,8 @@ import ReactMarkdown from 'react-markdown';
 
 export interface MarkdownProps {
   markdownSource: string
+	markdownText: string,
+	setMarkdownText: (markdownInput: string) => void
 }
 
 export const Markdown: React.FC<MarkdownProps> = props => {

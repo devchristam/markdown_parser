@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Markdown } from './Markdown';
+import { MarkdownInput } from './MarkdownInput';
 
 
 const App: React.FC = () => {
@@ -14,8 +15,13 @@ const App: React.FC = () => {
   normal text
   `;
 
+  const [markdownText, setMarkdownText] = useState("")
+
   return (
-    <Markdown markdownSource={myMakrdown}/>
+    <div>
+      <MarkdownInput markdownText={markdownText} setMarkdownText={setMarkdownText}/>
+      <Markdown markdownSource={myMakrdown} markdownText={markdownText} setMarkdownText={setMarkdownText}/>
+    </div>
   );
 }
 
