@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Markdown } from './Markdown';
 import { MarkdownInput } from './MarkdownInput';
 
@@ -15,7 +15,7 @@ const App = (): JSX.Element => {
   normal text
   `;
 
-  const [markdownText, setMarkdownText] = useState(myMarkdown)
+  const [markdownText, setMarkdownText] = useState<string>(myMarkdown)
 
   return (
     <div>
