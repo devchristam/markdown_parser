@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 export interface MarkdownProps {
@@ -7,7 +6,7 @@ export interface MarkdownProps {
 	setMarkdownText: (markdownInput: string) => void
 }
 
-export const Markdown: React.FC<MarkdownProps> = props => {
+export const Markdown = (props: MarkdownProps): JSX.Element => {
   return (
     <ReactMarkdown children={props.markdownSource} components={{
       h1: ({node, ...props}) => {return <div className="text-6xl my-4 mx-4" {...props}></div>},

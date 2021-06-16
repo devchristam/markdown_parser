@@ -3,7 +3,7 @@ import { Markdown } from './Markdown';
 import { MarkdownInput } from './MarkdownInput';
 
 
-const App: React.FC = () => {
+const App = (): JSX.Element => {
   const myMarkdown: string = `
   # testing title 6xl
   ## testing title 5xl

@@ -5,7 +5,7 @@ export interface markdownInputProps {
 	setMarkdownText: (markdownInput: string) => void
 }
 
-export const MarkdownInput: React.FC<markdownInputProps> = ({markdownText, setMarkdownText}) => {
+export const MarkdownInput = ({markdownText, setMarkdownText}: markdownInputProps): JSX.Element => {
 
 	const updateMarkdown = (event: React.ChangeEvent<HTMLTextAreaElement>): void => {
 		setMarkdownText(event.target.value)
