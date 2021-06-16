@@ -4,7 +4,7 @@ import { MarkdownInput } from './MarkdownInput';
 
 
 const App: React.FC = () => {
-  const myMakrdown: string = `
+  const myMarkdown: string = `
   # testing title 6xl
   ## testing title 5xl
   ### testing title 4xl
@@ -15,12 +15,12 @@ const App: React.FC = () => {
   normal text
   `;
 
-  const [markdownText, setMarkdownText] = useState("")
+  const [markdownText, setMarkdownText] = useState(myMarkdown)
 
   return (
     <div>
       <MarkdownInput markdownText={markdownText} setMarkdownText={setMarkdownText}/>
-      <Markdown markdownSource={myMakrdown} markdownText={markdownText} setMarkdownText={setMarkdownText}/>
+      <Markdown markdownSource={markdownText} markdownText={markdownText} setMarkdownText={setMarkdownText}/>
     </div>
   );
 }

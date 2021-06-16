@@ -14,7 +14,6 @@ export const MarkdownInput: React.FC<markdownInputProps> = ({markdownText, setMa
 	return (
 		<div>
 			<textarea className="resize-none" value={ markdownText } onChange={ updateMarkdown } ></textarea>
-			{markdownText}
 		</div>
 	)
 }
