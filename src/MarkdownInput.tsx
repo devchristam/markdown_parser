@@ -12,8 +12,9 @@ export const MarkdownInput = ({markdownText, setMarkdownText}: markdownInputProp
 	}
 
 	return (
-		<div>
-			<textarea className="resize-none" value={ markdownText } onChange={ updateMarkdown } ></textarea>
-		</div>
+		<div className="h-5/6 min-w-full max-w-full w-full">
+			<span className="ml-2 text-2xl font-semibold">Markdown text:</span>
+			<textarea className="resize-none w-full h-full rounded-md m-2 border border-gray-500" value={ markdownText } onChange={ updateMarkdown } ></textarea>
+		</div>	
 	)
 }
