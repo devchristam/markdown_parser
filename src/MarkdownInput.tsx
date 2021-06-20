@@ -10,7 +10,7 @@ export const MarkdownInput = ({markdownText, setMarkdownText}: markdownInputProp
 	const markdownTextarea = useRef<HTMLTextAreaElement>(null)
 
 	markdownTextarea.current?.addEventListener('keydown', function(e: KeyboardEvent) {
-		if(e.key == 'Tab'){
+		if(e.key === 'Tab'){
 			e.preventDefault()
 		}
 	})

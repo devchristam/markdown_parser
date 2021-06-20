@@ -44,7 +44,10 @@ normal text`;
 				<MarkdownInput markdownText={markdownText} setMarkdownText={setMarkdownText}/>
 			</div>
 			<div className="mx-10">
-				<Markdown markdownSource={markdownText} markdownText={markdownText} setMarkdownText={setMarkdownText}/>
+				<span className="ml-2 text-2xl font-semibold">Markdown result:</span>
+				<div className="p-2 m-2 rounded-md border border-gray-500">
+					<Markdown markdownSource={markdownText} markdownText={markdownText} setMarkdownText={setMarkdownText}/>
+				</div>
 			</div>
     </div>
   );
