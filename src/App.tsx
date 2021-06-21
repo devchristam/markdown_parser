@@ -5,36 +5,52 @@ import { MarkdownInput } from './MarkdownInput';
 
 const App = (): JSX.Element => {
   const myMarkdown: string = 
-`# testing title 6xl
-## testing title 5xl
-### testing title 4xl
-#### testing title 3xl
-##### testing title 2xl
-###### testing title xl
+`
+# Lorem ipsum
+## Lorem ipsum
+### Lorem ipsum
+#### Lorem ipsum
+##### Lorem ipsum
+###### Lorem ipsum
 
 ***
 
-**testing**
+**Lorem**
 
-*testing*
+*Lorem*
 
-> 12345
+> Lorem \`ipsum\` *dolor* sit amet consectetur **adipisicing elit.** Molestiae necessitatibus vel numquam nisi, dolores cumque animi illum maxime nemo nihil, expedita voluptatibus ad natus dolorum, laudantium quaerat autem voluptates deserunt?
 
 ---
 
-- [Testing](https://devchristam.com)
-- Testing
-- Testing
-- Testing
-- Testing
-- Testing
+- [Lorem](https://devchristam.com)
+- Lorem
+- Lorem
+- Lorem
+- Lorem
 
-1. [Testing](https://devchristam.com)
-2. Testing
-3. Testing
-4. Testing
-5. Testing
-normal text`;
+1. [Lorem](https://devchristam.com)
+2. Lorem
+3. Lorem
+4. Lorem
+5. Lorem
+
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci autem iusto corrupti maxime dolores, fugit totam magnam eum voluptatum. Rem quas quae repudiandae neque facere dicta architecto asperiores esse saepe.
+
+![alt text](logo192.png)
+
+\`\`\`js
+let x = 0.1
+let y = 0.2
+let z = x + y
+
+if(z === 0.3){
+	return true
+}
+return false
+\`\`\`
+
+`;
 
   const [markdownText, setMarkdownText] = useState<string>(myMarkdown)
 
