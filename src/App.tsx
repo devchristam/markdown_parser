@@ -15,6 +15,11 @@ const App = (): JSX.Element => {
 
 ***
 
+| Lorem | ipsum |
+|-------|-------|
+| dolor | sit   |
+| dolor | sit   |
+
 **Lorem**
 
 *Lorem*
