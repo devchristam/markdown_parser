@@ -43,7 +43,10 @@ export const Markdown = (props: MarkdownProps): JSX.Element => {
 					) : (
 						<span className="bg-yellow-200 text-yellow-800 px-1 mx-1 rounded-md" {...props}> {children} </span>
 					)
-			}
+			},
+      table: ({node, ...props}) => {return <table className="table-auto" {...props}></table>},
+      td: ({node, ...props}) => {return <td className="border border-gray-700 px-4 py-2" {...props}></td> },
+      th: ({node, ...props}) => {return <th className="px-4 py-2" {...props}></th> },
     }} />
   );
 }
