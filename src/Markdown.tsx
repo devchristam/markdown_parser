@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import remarkGfm from 'remark-gfm'
 
 export interface MarkdownProps {
 	markdownSource: string,
@@ -10,7 +11,7 @@ export interface MarkdownProps {
 
 export const Markdown = (props: MarkdownProps): JSX.Element => {
   return (
-    <ReactMarkdown children={props.markdownSource} components={{
+    <ReactMarkdown remarkPlugins={[remarkGfm]} children={props.markdownSource} components={{
       h1: ({node, ...props}) => {return <div className="font-semibold text-5xl my-4" {...props}></div>},
       h2: ({node, ...props}) => {return <div className="font-semibold text-4xl my-4" {...props}></div>},
       h3: ({node, ...props}) => {return <div className="font-semibold text-3xl my-4" {...props}></div>},
