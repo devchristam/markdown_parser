@@ -20,6 +20,9 @@ const App = (): JSX.Element => {
 | dolor | sit   |
 | dolor | sit   |
 
+- [ ] Lorem 
+- [x] Lorem 
+
 **Lorem**
 
 *Lorem*
