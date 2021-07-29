@@ -47,6 +47,7 @@ export const Markdown = (props: MarkdownProps): JSX.Element => {
       table: ({node, ...props}) => {return <table className="table-auto" {...props}></table>},
       td: ({node, ...props}) => {return <td className="border border-gray-700 px-4 py-2" {...props}></td> },
       th: ({node, ...props}) => {return <th className="px-4 py-2" {...props}></th> },
+      del: ({node, ...props}) => {return <span className="line-through" {...props}></span> },
     }} />
   );
 }
