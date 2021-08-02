@@ -7,13 +7,18 @@ This is a markdown parser built with react and tailwind CSS, to test different t
 
 script from Create react app and CRACO
 
-* `npm run start`
-	* run development server
-* `npm run test`
-	* run test
-* `npm run build`
-	* create build
-* `npm run eject`
+```bash
+# run development server
+$ npm run start
+
+# run test
+$ npm run test
+
+# create build
+$ npm run build
+
+$ npm run eject
+```
 
 
 ## Using Library
