@@ -34,7 +34,7 @@ export const Markdown = (props: MarkdownProps): JSX.Element => {
 				}
 				return <ol className="list-inside list-decimal ml-8" {...props}></ol>
 			},
-      a: ({node, ...props}) => {return <a className="text-blue-600" {...props}>{props.children}</a>},
+      a: ({node, ...props}) => {return <a className="text-blue-600 hover:underline" {...props}>{props.children}</a>},
       img: ({node, ...props}) => {return <div className="w-full flex justify-center"><img className="object-fill" alt={props.key} {...props}/></div>},
 			code: ({node, inline, className, children, ...props}) => {
 					const match = /language-(\w+)/.exec(className || '')
