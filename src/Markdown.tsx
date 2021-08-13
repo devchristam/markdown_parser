@@ -41,7 +41,7 @@ export const Markdown = (props: MarkdownProps): JSX.Element => {
 					return !inline && match ? (
 						<SyntaxHighlighter className="rounded-lg" style={vscDarkPlus} language={match[1]} PreTag="div" children={String(children).replace(/\n$/, '')} {...props} />
 					) : (
-						<span className="bg-yellow-200 text-yellow-800 px-1 mx-1 rounded-md" {...props}> {children} </span>
+						<span className="bg-yellow-200 text-yellow-800 px-1 rounded-md" {...props}>{children}</span>
 					)
 			},
       table: ({node, ...props}) => {return <table className="table-auto" {...props}></table>},
