@@ -12,6 +12,7 @@ export interface MarkdownProps {
 export const Markdown = (props: MarkdownProps): JSX.Element => {
   return (
     <ReactMarkdown remarkPlugins={[remarkGfm]} children={props.markdownSource} components={{
+      p: ({node, ...props}) => {return <p className="inline-block" {...props}></p>},
       h1: ({node, ...props}) => {return <div className="font-semibold text-5xl my-4" {...props}></div>},
       h2: ({node, ...props}) => {return <div className="font-semibold text-4xl my-4" {...props}></div>},
       h3: ({node, ...props}) => {return <div className="font-semibold text-3xl my-4" {...props}></div>},
