@@ -22,17 +22,34 @@ export const Markdown = (props: MarkdownProps): JSX.Element => {
       strong: ({node, ...props}) => {return <span className="font-medium" {...props}></span>},
       em: ({node, ...props}) => {return <span className="italic" {...props}></span>},
       blockquote: ({node, ...props}) => {return <blockquote className="bg-white border-l-8 border-yellow-300 px-4 py-3 my-4 mx-1" {...props}></blockquote>},
-      li: ({node, ...props}) => {return <li className="my-1" {...props}></li> },
-      ul: ({node, depth, ...props}) => {
+      li: ({node, className, ...props}) => {
+        if(className === "task-list-item"){
+          return <li className="my-1" {...props}></li>
+        }
+        return <li className="my-1" {...props}></li>
+      },
+      ul: ({node, depth, className, ...props}) => {
+        if(depth === 0 && className === "contains-task-list"){
+					return <ul className="list-inside list-none my-4 ml-0" {...props}></ul>
+        }
 				if(depth === 0){
 					return <ul className="list-inside list-disc my-4 ml-0" {...props}></ul>
 				}
+        if(className === "contains-task-list"){
+					return <ul className="list-inside list-none ml-8" {...props}></ul>
+        }
 				return <ul className="list-inside list-disc ml-8" {...props}></ul>
 			},
-      ol: ({node, depth, ...props}) => {
+      ol: ({node, depth, className, ...props}) => {
+        if(depth === 0 && className === "contains-task-list"){
+					return <ol className="list-inside list-none my-4 ml-0" {...props}></ol>
+        }
 				if(depth === 0){
 					return <ol className="list-inside list-decimal my-4 ml-0" {...props}></ol>
 				}
+        if(className === "contains-task-list"){
+					return <ol className="list-inside list-none ml-8" {...props}></ol>
+        }
 				return <ol className="list-inside list-decimal ml-8" {...props}></ol>
 			},
       a: ({node, ...props}) => {return <a className="text-blue-600 hover:underline" {...props}>{props.children}</a>},
