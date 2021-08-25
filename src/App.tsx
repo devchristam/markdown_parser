@@ -39,7 +39,7 @@ const App = (): JSX.Element => {
 - Lorem
 - Lorem
 
-1. [Lorem](https://devchristam.com)
+1. [Lorem](#lorem-ipsum)
 2. Lorem
 3. Lorem
 4. Lorem
