@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.1.2",
+    "@craco/craco": "^6.2.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -13,10 +13,11 @@
     "@types/react-dom": "^17.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-markdown": "^6.0.2",
-    "react-scripts": "4.0.3",
-    "react-syntax-highlighter": "^15.4.3",
-    "remark-gfm": "^1.0.0",
+    "react-markdown": "^7.0.0",
+    "react-scripts": "^4.0.3",
+    "react-syntax-highlighter": "^15.4.4",
+    "remark-gfm": "^2.0.0",
+    "remark-slug": "^7.0.0",
     "typescript": "^4.3.2",
     "web-vitals": "^1.1.2"
   },
@@ -45,9 +46,9 @@
     ]
   },
   "devDependencies": {
-    "@types/react-syntax-highlighter": "^13.5.0",
-    "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4"
+    "@types/react-syntax-highlighter": "^13.5.2",
+    "autoprefixer": "^10.3.2",
+    "postcss": "^8.3.6",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
   }
 }
