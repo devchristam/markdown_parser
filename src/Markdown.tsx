@@ -11,7 +11,7 @@ export interface MarkdownProps {
 
 export const Markdown = (props: MarkdownProps): JSX.Element => {
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} children={props.markdownSource} components={{
+    <ReactMarkdown className="break-words" remarkPlugins={[remarkGfm]} children={props.markdownSource} components={{
       p: ({node, ...props}) => {return <p className="inline-block" {...props}></p>},
       h1: ({node, ...props}) => {return <div className="font-semibold text-5xl my-4" {...props}></div>},
       h2: ({node, ...props}) => {return <div className="font-semibold text-4xl my-4" {...props}></div>},
@@ -24,9 +24,9 @@ export const Markdown = (props: MarkdownProps): JSX.Element => {
       blockquote: ({node, ...props}) => {return <blockquote className="bg-white border-l-8 border-yellow-300 px-4 py-3 my-4 mx-1" {...props}></blockquote>},
       li: ({node, className, ...props}) => {
         if(className === "task-list-item"){
-          return <li className="my-1" {...props}></li>
+          return <li className="list-item my-1" {...props}></li>
         }
-        return <li className="my-1" {...props}></li>
+        return <li className="list-item my-1" {...props}></li>
       },
       ul: ({node, depth, className, ...props}) => {
         if(depth === 0 && className === "contains-task-list"){
