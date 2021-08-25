@@ -31,25 +31,25 @@ export const Markdown = (props: MarkdownProps): JSX.Element => {
       },
       ul: ({depth, className, children}) => {
         if(depth === 0 && className === "contains-task-list"){
-					return <ul className="list-outside list-none my-4 ml-6">{children}</ul>
+					return <ul className="list-outside list-none my-4 ml-2">{children}</ul>
         }
 				if(depth === 0){
 					return <ul className="list-outside list-disc my-4 ml-6">{children}</ul>
 				}
         if(className === "contains-task-list"){
-					return <ul className="list-outside list-none ml-6">{children}</ul>
+					return <ul className="list-outside list-none ml-2">{children}</ul>
         }
 				return <ul className="list-outside list-disc ml-6">{children}</ul>
 			},
       ol: ({depth, className, children}) => {
         if(depth === 0 && className === "contains-task-list"){
-					return <ol className="list-outside list-none my-4 ml-6">{children}</ol>
+					return <ol className="list-outside list-none my-4 ml-2">{children}</ol>
         }
 				if(depth === 0){
 					return <ol className="list-outside list-decimal my-4 ml-6">{children}</ol>
 				}
         if(className === "contains-task-list"){
-					return <ol className="list-outside list-none ml-6">{children}</ol>
+					return <ol className="list-outside list-none ml-2">{children}</ol>
         }
 				return <ol className="list-outside list-decimal ml-6">{children}</ol>
 			},
