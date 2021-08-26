@@ -5,8 +5,7 @@ import { MarkdownInput } from './MarkdownInput';
 
 const App = (): JSX.Element => {
   const myMarkdown: string = 
-`
-# Lorem ipsum
+`# Lorem ipsum
 ## Lorem ipsum
 ### Lorem ipsum
 #### Lorem ipsum
@@ -14,6 +13,9 @@ const App = (): JSX.Element => {
 ###### Lorem ipsum
 
 ***
+
+- ### Lorem ipsum
+- > Lorem ipsum
 
 | Lorem | ipsum |
 |-------|-------|
@@ -35,9 +37,9 @@ const App = (): JSX.Element => {
 
 - [Lorem](https://devchristam.com)
 - Lorem
-- Lorem
-- Lorem
-- Lorem
+	- Lorem
+	- Lorem
+	- Lorem
 
 1. [Lorem](#lorem-ipsum)
 2. Lorem
